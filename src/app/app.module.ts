@@ -1,0 +1,36 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { NavComponent } from './components/shared/nav/nav.component';
+import { BookstoreAppComponent } from './components/bookstore-app/bookstore-app.component';
+import { BookstoreFiltersComponent } from './components/bookstore-filters/bookstore-filters.component';
+import { ProductLiComponent } from './components/product-li/product-li.component';
+import { ProductItemComponent } from './components/product-li/product-item/product-item.component';
+import { BooksService } from './components/product-li/product-li-.component.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    BookstoreAppComponent,
+    BookstoreFiltersComponent,
+    ProductLiComponent,
+    ProductItemComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    
+  ],
+  providers: [BooksService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
